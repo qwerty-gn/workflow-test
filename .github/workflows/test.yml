@@ -1,6 +1,6 @@
 ---
 name: CI
-on:
+"on":
   push:
     branches: ["main"]
   pull_request:
@@ -15,7 +15,7 @@ jobs:
       bar: ${{ steps.step1.outputs.bar }}
     steps:
       - uses: actions/checkout@v4
-      - name: Run a multi-line script
+      - uses: ./.github/actions/outputs
         id: step1
         run: |
           echo "foo=true" >> "$GITHUB_OUTPUT"
