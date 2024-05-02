@@ -23,7 +23,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     if: |
-      github.ref = 'refs/heads/main' &&
+      github.ref == 'refs/heads/main' &&
       (needs.check.outputs.foo == 'true' || needs.check.outputs.bar == 'true')
     needs:
       - check
