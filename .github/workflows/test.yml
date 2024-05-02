@@ -18,7 +18,7 @@ jobs:
       - name: Run a multi-line script
         id: step1
         run: |
-          echo "foo=false" >> "$GITHUB_OUTPUT"
+          echo "foo=true" >> "$GITHUB_OUTPUT"
           echo "bar=true" >> "$GITHUB_OUTPUT"
   test:
     runs-on: ubuntu-latest
