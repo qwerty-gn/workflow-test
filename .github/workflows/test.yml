@@ -1,10 +1,10 @@
-
+---
 name: CI
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   check:
@@ -18,8 +18,8 @@ jobs:
       - name: Run a multi-line script
         id: step1
         run: |
-	  echo "foo=false" >> "$GITHUB_OUTPUT"
-	  echo "bar=false" >> "$GITHUB_OUTPUT"
+          echo "foo=false" >> "$GITHUB_OUTPUT"
+          echo "bar=false" >> "$GITHUB_OUTPUT"
   test:
     runs-on: ubuntu-latest
     if: |
