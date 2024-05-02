@@ -17,9 +17,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/outputs
         id: step1
-        run: |
-          echo "foo=true" >> "$GITHUB_OUTPUT"
-          echo "bar=true" >> "$GITHUB_OUTPUT"
+
   test:
     runs-on: ubuntu-latest
     if: |
