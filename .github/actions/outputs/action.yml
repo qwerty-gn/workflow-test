@@ -15,5 +15,5 @@ runs:
       id: output
       shell: bash
       run: |
-        echo "foo=true" >> "$GITHUB_OUTPUT"
+        echo "foo=false" >> "$GITHUB_OUTPUT"
         echo "bar=true" >> "$GITHUB_OUTPUT"
