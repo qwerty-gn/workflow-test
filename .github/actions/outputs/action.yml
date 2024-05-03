@@ -2,12 +2,12 @@
 name: "Outputs"
 description: "Make some outputs"
 outputs:
-  foo:
+  FOO_CHANGED:
     description: "Value of foo"
-    value: ${{ steps.check.outputs.foo }}
-  bar:
+    value: ${{ steps.check.outputs.FOO_CHANGED }}
+  BAR_CHANGED:
     description: "Value of bar"
-    value: ${{ steps.check.outputs.bar }}
+    value: ${{ steps.check.outputs.BAR_CHANGED }}
 runs:
   using: "composite"
   steps:
@@ -15,5 +15,5 @@ runs:
       id: check
       shell: bash
       run: |
-        echo "foo=true" >> "$GITHUB_OUTPUT"
-        echo "bar=false" >> "$GITHUB_OUTPUT"
+        echo "FOO_CHANGED=true" >> "$GITHUB_OUTPUT"
+        echo "BAR_CHANGED=true" >> "$GITHUB_OUTPUT"
