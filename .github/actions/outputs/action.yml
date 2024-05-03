@@ -4,15 +4,15 @@ description: "Make some outputs"
 outputs:
   foo:
     description: "Value of foo"
-    value: ${{ steps.output.outputs.foo }}
+    value: ${{ steps.check.outputs.foo }}
   bar:
     description: "Value of bar"
-    value: ${{ steps.output.outputs.bar }}
+    value: ${{ steps.check.outputs.bar }}
 runs:
   using: "composite"
   steps:
     - name: "Output"
-      id: output
+      id: check
       shell: bash
       run: |
         echo "foo=false" >> "$GITHUB_OUTPUT"
