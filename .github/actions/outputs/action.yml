@@ -16,4 +16,4 @@ runs:
       shell: bash
       run: |
         echo "FOO_CHANGED=true" >> "$GITHUB_OUTPUT"
-        echo "BAR_CHANGED=true" >> "$GITHUB_OUTPUT"
+        echo "BAR_CHANGED=false" >> "$GITHUB_OUTPUT"
